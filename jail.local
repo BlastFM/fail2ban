@@ -1,0 +1,46 @@
+[ssh]
+
+enabled  = true
+port     = ssh
+filter   = sshd
+logpath  = /var/log/auth.log
+maxretry = 1
+bantime  = 900
+findtime = 900
+
+[ssh-ddos]
+
+enabled  = true
+port     = ssh
+filter   = sshd-ddos
+logpath  = /var/log/auth.log
+maxretry = 3
+bantime  = 86400
+findtime = 86400
+
+[postfix]
+
+enabled  = true
+port     = smtp,ssmtp,submission
+filter   = postfix
+logpath  = /var/log/mail.log
+maxretry = 1
+bantime  = 900
+findtime = 900
+
+[sasl]
+
+enabled  = true
+port     = smtp,ssmtp,submission,imap2,imap3,imaps,pop3,pop3s
+filter   = postfix-sasl
+logpath  = /var/log/mail.log
+
+[recidive]
+
+enabled  = true
+filter   = recidive
+logpath  = /var/log/fail2ban.*
+action   = iptables-allports[name=recidive]
+bantime  = 604800
+findtime = 86400
+maxretry = 5
