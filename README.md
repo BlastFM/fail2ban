@@ -10,5 +10,3 @@
 `The file jail.local containes the modified local jail which includes ssh, ssh-ddos, postfix-sasl, recidive in this case. Adjust to suit your needs.`
 
 >It also has a modified logpath to wildcard match all fail2ban* files in the log directory, for fail2ban.log.1, fail2ban.log.2 etc so that it does not stop reading the log files when they rotate.
-
-require "jail.local"
