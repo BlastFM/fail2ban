@@ -5,4 +5,4 @@ Some modifications need to be made to make the recidive jail work properly. The 
 
 `The fail2ban file contains the modified log rotation schedule`
 
-`The file jail.local containes the modified local jail which includes ssh, ssh-ddos, postfix, recidive in this case. Adjust to suit your needs.`
+`The file jail.local containes the modified local jail which includes ssh, ssh-ddos, postfix-sasl, recidive in this case. Adjust to suit your needs.`
