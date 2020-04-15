@@ -5,7 +5,7 @@ Some modifications need to be made to make the recidive jail work properly. The 
 
 `The fail2ban file contains the modified log rotation schedule`
 
-The only change here from the default is to remove the dailycompress option.
+The only change here from the default is to change the dailycompress option to compress.
 
 `The file jail.local containes the modified local jail which includes ssh, ssh-ddos, postfix-sasl, recidive in this case. Adjust to suit your needs.`
 
